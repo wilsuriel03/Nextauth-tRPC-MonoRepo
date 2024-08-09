@@ -1,15 +1,14 @@
 import NextAuth from "next-auth";
 
-import { authConfig } from "./config";
+import { authConfig } from "./configs/auth.config";
 
 export type { Session } from "next-auth";
 
-const { handlers, auth, signIn, signOut } = NextAuth(authConfig);
+const {
+  handlers: { GET, POST },
+  auth,
+  signIn,
+  signOut,
+} = NextAuth(authConfig);
 
-export { handlers, auth, signIn, signOut };
-
-export {
-  invalidateSessionToken,
-  validateToken,
-  isSecureContext,
-} from "./config";
+export { GET, POST, auth, signIn, signOut };

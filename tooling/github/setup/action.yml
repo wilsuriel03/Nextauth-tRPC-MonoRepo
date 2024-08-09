@@ -1,5 +1,5 @@
-name: "Setup and install"
-description: "Common setup steps for Actions"
+name: "Setup Node.js and PNPM Environment"
+description: "Prepares the GitHub Actions runner by installing a specific Node.js version and setting up PNPM for package management, including global installation of Turbo."
 
 runs:
   using: composite

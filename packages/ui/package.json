@@ -16,12 +16,12 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "clean": "git clean -xdf .cache .turbo dist node_modules",
     "dev": "tsc",
+    "add": "pnpm dlx shadcn-ui add && prettier src --write --list-different",
+    "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "ui-add": "pnpm dlx shadcn-ui add && prettier src --write --list-different"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.7.0",

@@ -6,14 +6,14 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "default": "./src/index.ts"
     }
   },
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "clean": "git clean -xdf .cache .turbo dist node_modules",
     "dev": "tsc",
+    "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
@@ -21,15 +21,20 @@
   "dependencies": {
     "@acme/auth": "workspace:*",
     "@acme/db": "workspace:*",
+    "@acme/utils": "workspace:*",
     "@acme/validators": "workspace:*",
     "@trpc/server": "catalog:",
+    "bcryptjs": "^2.4.3",
     "superjson": "2.2.1",
+    "uuid": "^9.0.1",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
     "@acme/prettier-config": "workspace:*",
     "@acme/tsconfig": "workspace:*",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/uuid": "^9.0.8",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"

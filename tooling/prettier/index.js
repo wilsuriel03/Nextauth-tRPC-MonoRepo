@@ -11,14 +11,13 @@ const config = {
     "prettier-plugin-tailwindcss",
   ],
   tailwindConfig: fileURLToPath(
-    new URL("../../tooling/tailwind/web.ts", import.meta.url),
+    new URL("../../tooling/tailwind/index.ts", import.meta.url),
   ),
   tailwindFunctions: ["cn", "cva"],
   importOrder: [
     "<TYPES>",
-    "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
+    "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
-    "^(expo(.*)$)|^(expo$)",
     "<THIRD_PARTY_MODULES>",
     "",
     "<TYPES>^@acme",

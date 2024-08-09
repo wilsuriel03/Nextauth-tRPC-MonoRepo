@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+@layer base {
+  :root {
+  }
+}
+
+@layer utilities {
+  .bg_noise {
+    @apply absolute inset-0 h-full w-full;
+    background-image: url("https://cdn.shopify.com/shopifycloud/identity/assets/gradient/noise-ae0ab1628dee87591c6f6d3740b6e7e4e5109417e35a0781070d9d737f959e22.png");
+    background-size: 100px;
+  }
+
+  .bg_gradient {
+    @apply absolute inset-0 h-full w-full blur-[250px];
+    transform: translate3d(0, 0, 0);
+  }
+
+  .bg_gradient_shape--1 {
+    @apply animate-gradientShapeAnimation1 absolute bottom-0 left-0 size-[700px] rounded-full bg-white mix-blend-lighten;
+    transform: translate(-30%, 40%);
+  }
+  .bg_gradient_shape--2 {
+    @apply animate-gradientShapeAnimation2 absolute right-0 top-0 size-[600px] rounded-full bg-white mix-blend-lighten;
+    transform: translate(20%, -40%);
+  }
+  .sign-in_divider::before {
+    @apply absolute left-0 h-px w-[45%] bg-neutral-500 content-[''];
+  }
+  .sign-in_divider::after {
+    @apply absolute right-0 h-px w-[45%] bg-neutral-500 content-[''];
+  }
+}
